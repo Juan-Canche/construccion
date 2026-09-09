@@ -65,7 +65,11 @@ public class Producto {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
-
     
-    
+    public void mostrarProducto() {
+        System.out.println("Codigo: " + this.getCodigo());
+        System.out.println("Nombre: " + this.getNombreProducto());
+        System.out.println("Precio: " + this.getPrecio());
+        System.out.println("Stock: " + this.getStock());
+    }
 }
