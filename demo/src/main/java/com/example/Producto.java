@@ -16,13 +16,12 @@ public class Producto {
     private  int stock;
     private boolean disponible;
 
-    public Producto(codigo, nombreProducto, precio, stock, disponible) {
+    public Producto(int codigo, String nombreProducto, double precio, int stock, boolean disponible) {
         this.codigo = codigo;
         this.nombreProducto = nombreProducto;
         this.precio = precio;
         this.stock = stock;
         this.disponible = disponible;
-
     }
 
     public int getCodigo() {

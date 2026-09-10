@@ -16,7 +16,7 @@ public class Cliente {
     private int edad;
     private boolean vip;
 
-    public Cliente(nombreCliente, edad, vip){
+    public Cliente(String nombreCliente, int edad, boolean vip){
         this.nombreCliente = nombreCliente;
         this.edad = edad;
         this.vip = vip;
@@ -47,6 +47,8 @@ public class Cliente {
     }
 
     public void mostrarCliente() {
-        System.out.println("Cliente: " + this.getNombreCliente() + " Edad: " + this.edad() + "VIP: " this.vip())
+        System.out.println("Cliente: " + this.getNombreCliente()
+                + " Edad: " + this.getEdad()
+                + " VIP: " + this.isVip());
     }
 }

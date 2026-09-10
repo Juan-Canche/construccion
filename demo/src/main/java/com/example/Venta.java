@@ -10,16 +10,19 @@ package com.example;
  * - Casteo innecesario de la varible total
  */
 public class Venta {
-    static int contadorVenta = 0;
+    private static int contadorVenta = 0;
     private Producto producto;
+    private Cliente cliente;
     private int cantidad;
-    private int total;
-    static final IVA = 0.16;
+    private double total;
+    private static final double IVA = 0.16;
 
-    public Venta(contadorVenta, cliente, cantidad) {
-        this.contadorVenta = contadorVenta;
+    public Venta(Producto producto, Cliente cliente, int cantidad) {
+        this.producto = producto;
         this.cliente = cliente;
         this.cantidad = cantidad;
+        contadorVenta += 1;
+        calcularTotal();
     }
 
     public int getContadorVenta() {
@@ -38,6 +41,14 @@ public class Venta {
         this.producto = producto;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
     public int getCantidad() {
         return cantidad;
     }
@@ -46,17 +57,24 @@ public class Venta {
         this.cantidad = cantidad;
     }
 
-    public int getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 
     public void calcularTotal() {
-        contadorVenta += 1;
-        double subtotal = producto.getPrecio() * this.cantidad();
-        double = subtotal + (subtotal + IVA)
+        double subtotal = producto.getPrecio() * this.cantidad;
+        this.total = subtotal + (subtotal * IVA);
+    }
+
+    public void imprimirTicket() {
+        System.out.println("Venta N: " + this.getContadorVenta());
+        System.out.println("Cliente: " + cliente.getNombreCliente())
+        System.out.println("Producto: " + producto.getNombreProducto());
+        System.out.println("Cantidad: " + this.getCantidad());
+        System.out.println("Total: " + this.getTotal());
     }
 }
