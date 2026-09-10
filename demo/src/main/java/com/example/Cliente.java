@@ -8,7 +8,7 @@ package com.example;
  * - El tipo de la variable edad es erronea, ya que usa string en lugar de int.
  * - El tipo de la varible vip es erronea, ya que usa char en lugar de boolean
  * - La clase carece de un constructor y esto hace que sea dificil de crear cuando hay varios objetos
- * - Los atributos de la clase usan de anera incorrecta los modificadores de acceso, ya que deberian ser private
+ * - Los atributos de la clase usan de manera incorrecta los modificadores de acceso, ya que deberian ser private
  * 
  */
 public class Cliente {

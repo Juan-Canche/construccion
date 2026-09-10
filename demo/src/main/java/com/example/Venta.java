@@ -7,7 +7,7 @@ package com.example;
  * - El contadorVentas no deberia ser static porque el contador
  * - El total no deria se un int, ya que se va ser uso de decimales
  * - En el calculo del total se hace el uso de un numero magico 0.16 y eso se podria hacer una constante para tener mas contexto
- * - Casteo innecesario de la varible total
+ * - Casteo innecesario de la varible total (es casteada porque la variable total primero se definió como int pero al ser cambiada a double el casteo es innecesario)
  */
 public class Venta {
     private static int contadorVenta = 0;
@@ -72,7 +72,7 @@ public class Venta {
 
     public void imprimirTicket() {
         System.out.println("Venta N: " + this.getContadorVenta());
-        System.out.println("Cliente: " + cliente.getNombreCliente())
+        System.out.println("Cliente: " + cliente.getNombreCliente());
         System.out.println("Producto: " + producto.getNombreProducto());
         System.out.println("Cantidad: " + this.getCantidad());
         System.out.println("Total: " + this.getTotal());
